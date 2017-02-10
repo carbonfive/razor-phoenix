@@ -1,10 +1,9 @@
 use Mix.Config
 
-# We don't run a server during test. If one is required,
-# you can enable the server option below.
+# We run a server during test for Wallaby integration testing.
 config :app_prototype, AppPrototype.Endpoint,
   http: [port: 4001],
-  server: false
+  server: true
 
 # Print only warnings and errors during test
 config :logger, level: :warn
@@ -17,3 +16,5 @@ config :app_prototype, AppPrototype.Repo,
   database: "app_prototype_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :app_prototype, :sql_sandbox, true

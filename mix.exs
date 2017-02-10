@@ -40,6 +40,7 @@ defmodule AppPrototype.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:phoenix_slime, "~> 0.8.0"},
+      {:wallaby, "~> 0.14.0"},
    ]
   end
 
