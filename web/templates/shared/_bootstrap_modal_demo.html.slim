@@ -1,0 +1,17 @@
+button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".modal"
+  |Launch demo modal
+.modal.fade tabindex="-1" role="dialog"
+  .modal-dialog role="document"
+    .modal-content
+      .modal-header
+        button.close type="button" data-dismiss="modal" aria-label="Close"
+          span aria-hidden="true"
+            |&times;
+        h4.modal-title
+          |Modal title
+      .modal-body
+        p
+          |If I'm a modal box, bootstrap js is working!
+      .modal-footer
+        button.btn.btn-default type="button" data-dismiss="modal"
+          |Close
