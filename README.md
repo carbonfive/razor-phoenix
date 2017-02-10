@@ -9,13 +9,14 @@ A convenience skeleton project for Phoenix.
 * Wallaby
 * Yarn
 * additional `acceptance` environment
-* ready for deployment to Heroku in `acceptance` and `prod` environments
+* CI testing via CircleCI
+* ready for deployment to Heroku Pipelines in `acceptance` and `prod` environments
 
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `npm install`
+  * Install Node.js dependencies with `yarn install`
   * Start Phoenix endpoint with `mix phoenix.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
@@ -32,7 +33,10 @@ Once you're up & running, search the code base for `AppPrototype` and `app_proto
   * If you use [`asdf`](https://github.com/asdf-vm/asdf), you'll be set up with the correct versions of `node` and `elixir` once they're installed. Otherwise, have a look at `.tool-versions` to see the current versions.
 
 ## Deployment
-  This app is pre-configured for easy deployment to Heroku.
+  This app is pre-configured for easy deployment to Heroku w/ pipelines using CircleCI.  CI is only used to run tests; your pipelines should be configured to auto-deploy branches after passing CI tests.
+
+  Convention is to auto-deploy `master` branch to `acceptance`, and `production` branch to `prod`.
+
   * Create Heroku apps for `acceptance` and `production`
   * Provision Heroku Postgres DB resources
   * Add buildpacks to Heroku apps

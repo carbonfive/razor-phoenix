@@ -1,0 +1,25 @@
+general:
+  artifacts:
+    - "screenshots"
+
+machine:
+  node:
+    version: 7.5.0
+
+dependencies:
+  pre:
+    - sudo apt-get update; sudo apt-get install libicu52
+    - script/ci/prepare.sh
+  cache_directories:
+    - ~/dependencies
+    - ~/.mix
+    - _build
+    - deps
+
+database:
+  override:
+    - echo "noop"
+
+test:
+  override:
+    - script/ci/test.sh
