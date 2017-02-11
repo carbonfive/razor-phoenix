@@ -12,7 +12,6 @@ config :app_prototype,
 # Configures the endpoint
 config :app_prototype, AppPrototype.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "W2KbsAr9v8Ji2VtYcNnVGjBNdTMiGw4Q1wyU0XVh1D+WAehS2b/Qtwy0AKfbv7jK",
   render_errors: [view: AppPrototype.ErrorView, accepts: ~w(html json)],
   pubsub: [name: AppPrototype.PubSub,
            adapter: Phoenix.PubSub.PG2]
