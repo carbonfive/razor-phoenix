@@ -12,19 +12,24 @@ A convenience skeleton project for Phoenix.
 * CI testing via CircleCI
 * ready for deployment to Heroku Pipelines in `acceptance` and `prod` environments
 
-To start your Phoenix app:
+## Getting started
+After you've cloned the app, perform global replacements for these with your app name:
+  * `AppPrototype`
+  * `app_prototype`
+  * `app-prototype`
+  * `App Prototype`
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `yarn install`
-  * Start Phoenix endpoint with `mix phoenix.server`
+Also rename the following directories & files:
+  * `/lib/app_prototype`
+  * `/web/static/css/_app_prototype.scss`
+  * `/web/static/js/app_prototype.js`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-In Chrome, you may instead have to visit [`127.0.0.1:4000`](http://127.0.0.1:4000)
+Verify that things are working:
+  * `brunch build`
+  * `mix test`
+  * `mix phoenix.server`
 
-You should also run the tests at this time.
-
-Once you're up & running, search the code base for `AppPrototype` and `app_prototype`.  Also remove any demo content, which is easy to determine from the elements on the landing page.
+Now you're ready to remove demo content, which is easy to spot from the landing page.
 
 ## Requirements
   * phantomjs is required for acceptance testing with Wallaby, i.e. `yarn global add phantomjs`. [`Lean more about wallaby`](https://github.com/keathley/wallaby)
@@ -50,7 +55,7 @@ Once you're up & running, search the code base for `AppPrototype` and `app_proto
 
 ## Notes
   * You will see warnings from several dependencies the first time they're compiled.
-    This is because many of them have not yet been upgraded for elixir 1.4, and they can be ignored.
+    This is because many of them have not yet been upgraded for elixir 1.4; these can be safely ignored.
 
 ## Learn more about Phoenix
 
