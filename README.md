@@ -7,10 +7,12 @@ A convenience skeleton project for Phoenix.
 * Sass
 * Bootstrap
 * Wallaby
+* Exmachina
 * Yarn
 * additional `acceptance` environment
 * CI testing via CircleCI
 * ready for deployment to Heroku Pipelines in `acceptance` and `prod` environments
+* .iex.exs for REPL aliases & imports
 
 ## Getting started
 After you've cloned the app, perform global replacements for these with your app name:
