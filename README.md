@@ -1,18 +1,18 @@
 ## Phoenix Prototype app
 A convenience skeleton project for Phoenix.
 
-* Phoenix
-* PostgreSQL
-* Slim
+* [Phoenix](https://hex.pm/packages/phoenix)
+* [Postgrex](https://hex.pm/packages/postgrex)
+* [Slim](https://hex.pm/packages/slime)
+* [Wallaby](https://hex.pm/packages/wallaby)
+* [ExMachina](https://hex.pm/packages/ex_machina)
+* Yarn
 * Sass
 * Bootstrap
-* Wallaby
-* Exmachina
-* Yarn
 * additional `acceptance` environment
 * CI testing via CircleCI
-* ready for deployment to Heroku Pipelines in `acceptance` and `prod` environments
 * .iex.exs for REPL aliases & imports
+* ready for deployment to Heroku Pipelines in `acceptance` and `prod` environments.  
 
 ## Getting started
 After you've cloned the app, perform global replacements for these with your app name:
@@ -26,11 +26,10 @@ Also rename the following directories & files:
   * `/web/static/css/_app_prototype.scss`
   * `/web/static/js/app_prototype.js`
 
-Verify that things are working:
+Now you can finish your setup & verify things are working:
+  * `mix ecto.setup`
   * `brunch build`
   * `mix test`
-
-Now you're ready to remove demo content, which is easy to spot from the landing page.
 
 ## Running the server
   Each environment is responsible for setting the `SECRET_KEY_BASE`.  With the exception of the `test` environment, this value is derived from a system environment variable.
@@ -45,6 +44,13 @@ SECRET_KEY_BASE="xxxxxx"
 `SECRET_KEY_BASE` can be generated with the task `mix phoenix.gen.secret`.
 
 As a convenience, a weak `SECRET_KEY_BASE` is hard-coded in the `test` environment. You can easily change this to read an env var a la the other environments instead.
+
+#### Give it a spin: 
+  * `mix phoenix.server`
+  * visit the app in a browser (default is `http://localhost:4000`, or `http://127.0.0.1:4000` in some versions of Chrome)
+
+Now you're ready to remove demo content, which is easy to spot from the landing page.
+
 
 ## Requirements
   * phantomjs is required for acceptance testing with Wallaby, i.e. `yarn global add phantomjs`.
@@ -72,6 +78,8 @@ As a convenience, a weak `SECRET_KEY_BASE` is hard-coded in the `test` environme
 ## Notes
   * You will see warnings from several dependencies the first time they're compiled.
     This is because many of them have not yet been upgraded for elixir 1.4; these can be safely ignored.
+  * There's a decent chance you'll eventually want a production environment with more control & power.  Heroku is currently the simplest way to get up & running for prototyping, and may even suit your app just fine long term.
+  * Razor should be used for convenience, not to avoid learning more about Phoenix and Elixir. Please take the time to learn about the opinions provided by Razor & how they are implemented.
 
 ## Learn more about Phoenix
 
