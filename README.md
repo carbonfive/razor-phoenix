@@ -27,7 +27,9 @@ Also rename the following directories & files:
   * `/web/static/js/app_prototype.js`
 
 Now you can finish your setup & verify things are working:
+  * `mix deps.get`
   * `mix ecto.setup`
+  * `yarn install`
   * `brunch build`
   * `mix test`
 
