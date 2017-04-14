@@ -1,3 +1,5 @@
+![alt tag](https://github.com/craiglyons/razor/blob/master/static/logo_tmp.jpg)
+
 ## Phoenix Prototype app
 A convenience skeleton project for Phoenix.
 
