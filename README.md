@@ -71,13 +71,15 @@ Now you're ready to remove demo content, which is easy to spot from the landing 
   * Create Heroku apps for `acceptance` and `production`
   * Provision Heroku Postgres DB resources
   * Add buildpacks to Heroku apps
-    * `heroku buildpacks:add "https://github.com/HashNuke/heroku-buildpack-elixir.git"`
-    * `heroku buildpacks:add https://github.com/gjaldon/heroku-buildpack-phoenix-static.git`
+    * `heroku buildpacks:add https://github.com/HashNuke/heroku-buildpack-elixir.git --app your-heroku-app-name`
+    * `heroku buildpacks:add https://github.com/gjaldon/heroku-buildpack-phoenix-static.git --app your-heroku-app-name`
   * Add environment variables to Heroku
     * `SECRET_KEY_BASE`, which can be generated with the task `mix phoenix.gen.secret`
     * `MIX_ENV` should be `acceptance` and `prod` respectively
     * `POOL_SIZE` should be set 2 units below the max db connections allowed by the Heroku instance. This allows mix tasks to be run with 2 connections.
     * `DATABASE_URL` should have been filled automatically by provisioning heroku postgres.
+
+
 
 ## Notes
   * You will see warnings from several dependencies the first time they're compiled.
