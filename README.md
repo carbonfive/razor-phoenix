@@ -1,7 +1,7 @@
 ![alt tag](https://github.com/craiglyons/razor/blob/master/static/logo_tmp.jpg)
 
 ## Phoenix Prototype app
-A convenience skeleton project for Phoenix.
+A Carbon Five-flavored convenience skeleton project for Phoenix.
 
 * [Phoenix](https://hex.pm/packages/phoenix)
 * [Postgrex](https://hex.pm/packages/postgrex)
@@ -16,8 +16,13 @@ A convenience skeleton project for Phoenix.
 * .iex.exs for REPL aliases & imports
 * ready for deployment to Heroku Pipelines in `acceptance` and `prod` environments.  
 
-## Getting started
-After you've cloned the app, perform global replacements for these with your app name:
+## Automatic installation
+It's strongly recommended you don't clone this repo, and instead [zap your project using Razor](https://github.com/carbonfive/razor).
+The zapper will handle all of the following steps programmatically.
+
+## Manual installation
+If you can't use [Razor](https://github.com/carbonfive/razor) to install for some reason, you can start by cloning this repo.
+Next, you'll perform global replacements for these with your app name:
   * `AppPrototype`
   * `app_prototype`
   * `app-prototype`
@@ -42,16 +47,17 @@ Now you can finish your setup & verify things are working:
 
 #### Sample `.env` file
 ```
-MIX_ENV="dev"
+MIX_ENV=dev
 SECRET_KEY_BASE="xxxxxx"
 ```
 `SECRET_KEY_BASE` can be generated with the task `mix phoenix.gen.secret`.
 
 As a convenience, a weak `SECRET_KEY_BASE` is hard-coded in the `test` environment. You can easily change this to read an env var a la the other environments instead.
 
-#### Give it a spin: 
-  * `mix phoenix.server`
-  * visit the app in a browser (default is `http://localhost:4000`, or `http://127.0.0.1:4000` in some versions of Chrome)
+#### Give it a spin:
+* Run with something that works with `.env` files, i.e. `foreman` or `heroku local`
+* OR `source .env` and `mix phoenix.server`
+* visit the app in a browser (default is `http://localhost:4000`, or `http://127.0.0.1:4000` in some versions of Chrome)
 
 Now you're ready to remove demo content, which is easy to spot from the landing page.
 
