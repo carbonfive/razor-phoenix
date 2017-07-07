@@ -34,6 +34,9 @@ html lang="en"
               /   li =link "sign in", to: session_path(@conn, :new)
 
     .container
+      .row
+        a href="https://www.github.com/carbonfive/razor" target="_blank"
+          img src="#{static_path(@conn, "/images/razor_logo.jpg")}" class="img-responsive center-block"
       =if info = get_flash(@conn, :info) do
         p.alert.alert-info role="alert"
           = info
@@ -42,11 +45,6 @@ html lang="en"
           = error
 
       main role="main"
-        hr
-        #js-demo Uh oh, this text should have been replaced by app_prototype.js.
-        hr
-        = render AppPrototype.SharedView, "_bootstrap_modal_demo.html"
-        hr
         = render @view_module, @view_template, assigns
 
     script src="#{static_path(@conn, "/js/app.js")}"
