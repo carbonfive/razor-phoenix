@@ -72,7 +72,7 @@ Now you're ready to remove demo content, which is easy to spot from the landing 
 ## Deployment
   This app is pre-configured for easy deployment to Heroku w/ pipelines using CircleCI.  CI is only used to run tests; your pipelines should be configured to auto-deploy branches after passing CI tests.
 
-  Convention is to auto-deploy `master` branch to `acceptance`, and `production` branch to `prod`.
+  Convention is to auto-deploy `master` branch to `acceptance`, and `production` branch to `production`.
 
   * Create Heroku apps for `acceptance` and `production`
   * Provision Heroku Postgres DB resources
