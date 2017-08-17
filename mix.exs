@@ -4,7 +4,7 @@ defmodule AppPrototype.Mixfile do
   def project do
     [app: :app_prototype,
      version: "0.0.1",
-     elixir: "~> 1.2",
+     elixir: "~> 1.4.5",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
@@ -34,17 +34,17 @@ defmodule AppPrototype.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.2.1"},
+      {:phoenix, "~> 1.3.0"},
       {:phoenix_pubsub, "~> 1.0"},
-      {:phoenix_ecto, "~> 3.0"},
-      {:postgrex, ">= 0.0.0"},
-      {:phoenix_html, "~> 2.6"},
-      {:phoenix_live_reload, "~> 1.0", only: :dev},
-      {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"},
-      {:phoenix_slime, "~> 0.8.0"},
-      {:wallaby, "~> 0.14.0", only: :test},
-      {:ex_machina, "~> 1.0", only: :test},
+      {:phoenix_ecto, "~> 3.2"},
+      {:postgrex, "~> 0.13.3"},
+      {:phoenix_html, "~> 2.10"},
+      {:gettext, "~> 0.13.1"},
+      {:cowboy, "~> 1.1"},
+      {:phoenix_slime, "~> 0.9.0"},
+      {:phoenix_live_reload, "~> 1.1", only: :dev},
+      {:wallaby, "~> 0.19.0", only: :test},
+      {:ex_machina, "~> 2.0", only: :test},
    ]
   end
 
