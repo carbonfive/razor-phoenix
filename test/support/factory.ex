@@ -1,5 +1,5 @@
 defmodule AppPrototype.Factory do
-  use ExMachina.Ecto, repo: AppPrototyp.Repo
+  use ExMachina.Ecto, repo: AppPrototype.Repo
   # Sample user factory
   # def user_factory do
   #   %User{
