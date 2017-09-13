@@ -45,6 +45,7 @@ defmodule AppPrototype.Mixfile do
       {:phoenix_slime, "~> 0.8.0"},
       {:wallaby, "~> 0.14.0", only: :test},
       {:ex_machina, "~> 1.0", only: :test},
+      {:credo, "~> 0.8", only: [:dev, :test], runtime: false},
    ]
   end
 
