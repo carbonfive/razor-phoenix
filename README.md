@@ -84,6 +84,7 @@ Now you're ready to remove demo content, which is easy to spot from the landing 
     * `MIX_ENV` should be `acceptance` and `prod` respectively
     * `POOL_SIZE` should be set 2 units below the max db connections allowed by the Heroku instance. This allows mix tasks to be run with 2 connections.
     * `DATABASE_URL` should have been filled automatically by provisioning heroku postgres.
+  * Migrations are run automatically using Heroku's [release phase](https://devcenter.heroku.com/articles/release-phase).
 
 
 
