@@ -1,4 +1,4 @@
-defmodule AppPrototype.Endpoint do
+defmodule AppPrototypeWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :app_prototype
 
   socket "/socket", AppPrototype.UserSocket

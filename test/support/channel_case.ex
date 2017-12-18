@@ -27,7 +27,7 @@ defmodule AppPrototype.ChannelCase do
 
 
       # The default endpoint for testing
-      @endpoint AppPrototype.Endpoint
+      @endpoint AppPrototypeWeb.Endpoint
     end
   end
 

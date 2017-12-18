@@ -1,6 +1,6 @@
 use Mix.Config
 
- config :app_prototype, AppPrototype.Endpoint,
+ config :app_prototype, AppPrototypeWeb.Endpoint,
    http: [port: {:system, "PORT"}],
    url: [scheme: "https", host: "app-prototype-acceptance.herokuapp.com", port: 443],
    force_ssl: [rewrite_on: [:x_forwarded_proto]],

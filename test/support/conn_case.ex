@@ -28,7 +28,7 @@ defmodule AppPrototype.ConnCase do
       import AppPrototype.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint AppPrototype.Endpoint
+      @endpoint AppPrototypeWeb.Endpoint
     end
   end
 
