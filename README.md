@@ -36,8 +36,8 @@ Also rename the following directories & files:
 Now you can finish your setup & verify things are working:
   * `mix deps.get`
   * `mix ecto.setup`
-  * `yarn install`
-  * `brunch build`
+  * `cd assets && yarn install`
+  * `cd assets && brunch build`
   * `mix test`
 
 ## Running the server
@@ -50,13 +50,13 @@ Now you can finish your setup & verify things are working:
 MIX_ENV=dev
 SECRET_KEY_BASE="xxxxxx"
 ```
-`SECRET_KEY_BASE` can be generated with the task `mix phoenix.gen.secret`.
+`SECRET_KEY_BASE` can be generated with the task `mix phx.gen.secret`.
 
 As a convenience, a weak `SECRET_KEY_BASE` is hard-coded in the `test` environment. You can easily change this to read an env var a la the other environments instead.
 
 #### Give it a spin:
 * Run with something that works with `.env` files, i.e. `foreman` or `heroku local`
-* OR `source .env` and `mix phoenix.server`
+* OR `source .env` and `mix phx.server`
 * visit the app in a browser (default is `http://localhost:4000`, or `http://127.0.0.1:4000` in some versions of Chrome)
 
 Now you're ready to remove demo content, which is easy to spot from the landing page.
@@ -80,7 +80,7 @@ Now you're ready to remove demo content, which is easy to spot from the landing 
     * `heroku buildpacks:add https://github.com/HashNuke/heroku-buildpack-elixir.git --app your-heroku-app-name`
     * `heroku buildpacks:add https://github.com/gjaldon/heroku-buildpack-phoenix-static.git --app your-heroku-app-name`
   * Add environment variables to Heroku
-    * `SECRET_KEY_BASE`, which can be generated with the task `mix phoenix.gen.secret`
+    * `SECRET_KEY_BASE`, which can be generated with the task `mix phx.gen.secret`
     * `MIX_ENV` should be `acceptance` and `prod` respectively
     * `POOL_SIZE` should be set 2 units below the max db connections allowed by the Heroku instance. This allows mix tasks to be run with 2 connections.
     * `DATABASE_URL` should have been filled automatically by provisioning heroku postgres.

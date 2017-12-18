@@ -14,26 +14,23 @@ exports.config = {
       joinTo: "js/app.js"
     }
   },
-conventions: {
-    assets: /^(web\/static\/assets)/
+  conventions: {
+    assets: /^(static)/
   },
-// Phoenix paths configuration
+  // Phoenix paths configuration
   paths: {
     // Dependencies and current project directories to watch
-    watched: [
-      "web/static",
-      "test/static"
-    ],
-// Where to compile files to
-    public: "priv/static"
+    watched: ["static", "css", "js", "vendor"],
+    // Where to compile files to
+    public: "../priv/static"
   },
 
   plugins: {
     babel: {
-      ignore: [/web\/static\/vendor/]
+      ignore: [/vendor/]
     },
     copycat: {
-      "fonts": ["node_modules/bootstrap-sass/assets/fonts/bootstrap"] // copy node_modules/bootstrap-sass/assets/fonts/bootstrap/* to priv/static/fonts/
+      fonts: ["node_modules/bootstrap-sass/assets/fonts/bootstrap"] // copy node_modules/bootstrap-sass/assets/fonts/bootstrap/* to priv/static/fonts/
     },
     sass: {
       options: {
@@ -45,16 +42,17 @@ conventions: {
 
   modules: {
     autoRequire: {
-      "js/app.js": ["web/static/js/app"]
+      "js/app.js": ["js/app"]
     }
   },
 
   npm: {
     enabled: true,
-    globals: { // bootstrap-sass' JavaScript requires both '$' and 'jQuery' in global scope
-      $: 'jquery',
-      jQuery: 'jquery',
-      bootstrap: 'bootstrap-sass' // require bootstrap-sass' JavaScript globally
+    globals: {
+      // bootstrap-sass' JavaScript requires both '$' and 'jQuery' in global scope
+      $: "jquery",
+      jQuery: "jquery",
+      bootstrap: "bootstrap-sass" // require bootstrap-sass' JavaScript globally
     }
   }
-}
+};
