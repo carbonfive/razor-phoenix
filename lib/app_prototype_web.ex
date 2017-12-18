@@ -28,20 +28,20 @@ defmodule AppPrototype.Web do
 
   def controller do
     quote do
-      use Phoenix.Controller
+      use Phoenix.Controller, namespace: AppPrototypeWeb
 
       alias AppPrototype.Repo
       import Ecto
       import Ecto.Query
 
-      import AppPrototype.Router.Helpers
+      import AppPrototypeWeb.Router.Helpers
       import AppPrototype.Gettext
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "web/templates"
+      use Phoenix.View, root: "lib/app_prototype_web/templates", namespace: AppPrototypeWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1]
@@ -49,7 +49,7 @@ defmodule AppPrototype.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import AppPrototype.Router.Helpers
+      import AppPrototypeWeb.Router.Helpers
       import AppPrototype.ErrorHelpers
       import AppPrototype.Gettext
     end

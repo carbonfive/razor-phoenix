@@ -43,5 +43,5 @@ defmodule AppPrototypeWeb.Endpoint do
     key: "_app_prototype_key",
     signing_salt: "D8tkl6+p"
 
-  plug AppPrototype.Router
+  plug AppPrototypeWeb.Router
 end

@@ -1,4 +1,4 @@
-defmodule AppPrototype.Router do
+defmodule AppPrototypeWeb.Router do
   use AppPrototype.Web, :router
 
   pipeline :browser do
