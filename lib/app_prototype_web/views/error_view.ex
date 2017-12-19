@@ -1,4 +1,4 @@
-defmodule AppPrototype.ErrorView do
+defmodule AppPrototypeWeb.ErrorView do
   use AppPrototype.Web, :view
 
   def render("404.html", _assigns) do

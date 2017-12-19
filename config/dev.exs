@@ -13,7 +13,7 @@ config :app_prototype, AppPrototypeWeb.Endpoint,
   check_origin: false,
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
   watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
-                    cd: Path.expand("../", __DIR__)]]
+                    cd: Path.expand("../assets", __DIR__)]]
 
 
 # Watch static and templates for browser reloading.
