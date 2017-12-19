@@ -1,4 +1,4 @@
-defmodule AppPrototype.UserSocket do
+defmodule AppPrototypeWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels

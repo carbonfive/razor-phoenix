@@ -1,3 +1,3 @@
-defmodule AppPrototype.PageView do
+defmodule AppPrototypeWeb.PageView do
   use AppPrototype.Web, :view
 end

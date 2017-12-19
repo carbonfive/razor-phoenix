@@ -1,7 +1,7 @@
 defmodule AppPrototypeWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :app_prototype
 
-  socket "/socket", AppPrototype.UserSocket
+  socket "/socket", AppPrototypeWeb.UserSocket
 
   # Enable concurrent testing
   if Application.get_env(:app_prototype, :sql_sandbox) do
