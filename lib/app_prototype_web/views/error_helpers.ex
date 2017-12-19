@@ -1,4 +1,4 @@
-defmodule AppPrototype.ErrorHelpers do
+defmodule AppPrototypeWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """

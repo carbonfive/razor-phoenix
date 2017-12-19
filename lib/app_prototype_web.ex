@@ -50,7 +50,7 @@ defmodule AppPrototype.Web do
       use Phoenix.HTML
 
       import AppPrototypeWeb.Router.Helpers
-      import AppPrototype.ErrorHelpers
+      import AppPrototypeWeb.ErrorHelpers
       import AppPrototypeWeb.Gettext
     end
   end
