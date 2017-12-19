@@ -22,8 +22,8 @@ config :app_prototype, AppPrototypeWeb.Endpoint,
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
-      ~r{web/views/.*(ex)$},
-      ~r{web/templates/.*(eex|slim)$}
+      ~r{lib/app_prototype_web/views/.*(ex)$},
+      ~r{lib/app_prototype_web/templates/.*(eex|slim)$}
     ]
   ]
 
