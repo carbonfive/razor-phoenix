@@ -1,5 +1,5 @@
 defmodule AppPrototypeWeb.Router do
-  use AppPrototype.Web, :router
+  use AppPrototypeWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]

@@ -1,12 +1,12 @@
-defmodule AppPrototype.Web do
+defmodule AppPrototypeWeb do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use AppPrototype.Web, :controller
-      use AppPrototype.Web, :view
+      use AppPrototypeWeb, :controller
+      use AppPrototypeWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused

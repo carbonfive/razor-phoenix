@@ -12,7 +12,7 @@ config :app_prototype,
 # Configures the endpoint
 config :app_prototype, AppPrototypeWeb.Endpoint,
   url: [host: "localhost"],
-  render_errors: [view: AppPrototype.ErrorView, accepts: ~w(html json)],
+  render_errors: [view: AppPrototypeWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: AppPrototype.PubSub,
            adapter: Phoenix.PubSub.PG2]
 

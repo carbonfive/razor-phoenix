@@ -1,5 +1,5 @@
 defmodule AppPrototypeWeb.ErrorView do
-  use AppPrototype.Web, :view
+  use AppPrototypeWeb, :view
 
   def render("404.html", _assigns) do
     "Page not found"

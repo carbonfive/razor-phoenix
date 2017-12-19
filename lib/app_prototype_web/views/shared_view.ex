@@ -1,3 +1,3 @@
 defmodule AppPrototypeWeb.SharedView do
-  use AppPrototype.Web, :view
+  use AppPrototypeWeb, :view
 end

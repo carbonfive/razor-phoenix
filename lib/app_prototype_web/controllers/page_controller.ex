@@ -1,5 +1,5 @@
 defmodule AppPrototypeWeb.PageController do
-  use AppPrototype.Web, :controller
+  use AppPrototypeWeb, :controller
 
   def index(conn, _params) do
     conn
