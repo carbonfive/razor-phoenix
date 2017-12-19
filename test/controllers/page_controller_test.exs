@@ -1,5 +1,5 @@
 defmodule AppPrototypeWeb.PageControllerTest do
-  use AppPrototype.ConnCase, async: true
+  use AppPrototypeWeb.ConnCase, async: true
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"
