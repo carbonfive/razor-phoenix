@@ -19,9 +19,10 @@ defmodule AppPrototype.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {AppPrototype, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+    [mod: {AppPrototype.Application, []},
+     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :gettext,
+                    :phoenix_ecto, :postgrex],
+     extra_applications: [:logger, :runtime_tools]]
   end
 
   # Specifies which paths to compile per environment.
@@ -35,15 +36,15 @@ defmodule AppPrototype.Mixfile do
     [
       {:phoenix, "~> 1.3.0"},
       {:phoenix_pubsub, "~> 1.0"},
-      {:phoenix_ecto, "~> 3.0"},
+      {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
-      {:phoenix_html, "~> 2.6"},
+      {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:phoenix_slime, "~> 0.8.0"},
-      {:wallaby, "~> 0.14.0", only: :test},
-      {:ex_machina, "~> 1.0", only: :test},
+      {:phoenix_slime, "~> 0.9.0"},
+      {:wallaby, "~> 0.19.2", only: :test},
+      {:ex_machina, "~> 2.1", only: :test},
    ]
   end
 
