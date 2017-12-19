@@ -7,7 +7,7 @@ defmodule AppPrototype.Repo do
   """
   def init(_, opts) do
     pool_size = String.to_integer(System.get_env("POOL_SIZE") || "10")
-    database_url = System.get_env("DATABASE_URL") || raise("Expected DATABASE_URL environment variable to be set.")
+    database_url = System.get_env("DATABASE_URL")
 
     opts = opts
     |> Keyword.put(:url, database_url)
