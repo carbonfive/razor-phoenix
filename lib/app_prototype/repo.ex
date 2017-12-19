@@ -6,6 +6,13 @@ defmodule AppPrototype.Repo do
   DATABASE_URL environment variable.
   """
   def init(_, opts) do
-    {:ok, Keyword.put(opts, :url, System.get_env("DATABASE_URL"))}
+    pool_size = String.to_integer(System.get_env("POOL_SIZE") || "10")
+    database_url = System.get_env("DATABASE_URL") || raise("Expected DATABASE_URL environment variable to be set.")
+
+    opts = opts
+    |> Keyword.put(:url, database_url)
+    |> Keyword.put(:pool_size, pool_size)
+
+    {:ok, opts}
   end
 end

@@ -15,11 +15,9 @@ use Mix.Config
 # which you typically run after static files are built.
 
 config :app_prototype, AppPrototypeWeb.Endpoint,
-  load_from_system_env: true
-  url: [scheme: "https", host: "app-prototype-prod.herokuapp.com", port: 443],
+  load_from_system_env: true,
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
-  cache_static_manifest: "priv/static/cache_manifest.json",
-  secret_key_base: System.get_env("SECRET_KEY_BASE")
+  cache_static_manifest: "priv/static/cache_manifest.json"
 
 # ## SSL Support
 #
@@ -59,10 +57,7 @@ config :app_prototype, AppPrototypeWeb.Endpoint,
 #     config :app_prototype, AppPrototypeWeb.Endpoint, server: true
 #
 
-
 # Configure your database
 config :app_prototype, AppPrototype.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  url: System.get_env("DATABASE_URL"),
-  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
-  ssl: true
+  adapter: Ecto.Adapters.Postgres
+  # ssl: true
