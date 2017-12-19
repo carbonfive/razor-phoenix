@@ -1,11 +1,11 @@
-defmodule AppPrototype.Gettext do
+defmodule AppPrototypeWeb.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import AppPrototype.Gettext
+      import AppPrototypeWeb.Gettext
 
       # Simple translation
       gettext "Here is the string to translate"

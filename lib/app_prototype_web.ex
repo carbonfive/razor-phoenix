@@ -35,7 +35,7 @@ defmodule AppPrototype.Web do
       import Ecto.Query
 
       import AppPrototypeWeb.Router.Helpers
-      import AppPrototype.Gettext
+      import AppPrototypeWeb.Gettext
     end
   end
 
@@ -51,7 +51,7 @@ defmodule AppPrototype.Web do
 
       import AppPrototypeWeb.Router.Helpers
       import AppPrototype.ErrorHelpers
-      import AppPrototype.Gettext
+      import AppPrototypeWeb.Gettext
     end
   end
 
@@ -68,7 +68,7 @@ defmodule AppPrototype.Web do
       alias AppPrototype.Repo
       import Ecto
       import Ecto.Query
-      import AppPrototype.Gettext
+      import AppPrototypeWeb.Gettext
     end
   end
 
