@@ -98,6 +98,7 @@ Convention is to auto-deploy `master` branch to `acceptance`, and `production` b
   * `POOL_SIZE` should be set 2 units below the max db connections allowed by the Heroku instance. This allows mix tasks to be run with 2 connections.
   * `DATABASE_URL` should have been filled automatically by provisioning heroku postgres.
 * Migrations are run automatically using Heroku's [release phase](https://devcenter.heroku.com/articles/release-phase).
+* Configure Elixir, Erlang and Node versions via the `elixir_buildpack.config` and `phoenix_static_buildpack.config` files. See the corresponding buildpack project pages for more configuration variables.
 
 ## Notes
 
