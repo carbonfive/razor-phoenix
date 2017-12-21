@@ -1,0 +1,41 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: circleci/elixir:1.5.1
+      - image: postgres:9.6.2
+        env:
+          - POSTGRES_USER=ubuntu
+    working_directory: ~/razor-phoenix
+    steps:
+      - type: checkout
+      - run: 
+          name: Install PhantomJS Dependencies
+          command: |
+            [ -f /usr/local/bin/phantomjs ] || sudo apt-get update
+            [ -f /usr/local/bin/phantomjs ] || sudo apt-get install -y fontconfig wget
+      - run:
+          name: Install PhantomJS
+          command: |
+            [ -f /usr/local/bin/phantomjs ] || wget -O /tmp/phantomjs.tar.bz2 https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+            [ -f /usr/local/bin/phantomjs ] || tar -xjf /tmp/phantomjs.tar.bz2 -C /tmp
+            [ -f /usr/local/bin/phantomjs ] || sudo mv /tmp/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
+      - run: 
+          name: Install npm & node
+          command: |
+            sudo wget -qO- https://deb.nodesource.com/setup_7.x | sudo bash -
+            sudo apt-get install -y nodejs
+      - run:
+          name: Install Yarn
+          command: |
+            sudo apt-get update && sudo npm install -g yarn
+      - run: 
+          name: Install Brunch
+          command: |
+            sudo npm install -g brunch
+      - run: mix local.rebar --force
+      - run: mix local.hex --force
+      - run: mix deps.get
+      - run: yarn
+      - run: cd assets && brunch build && cd -
+      - run: mix test

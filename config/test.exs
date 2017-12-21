@@ -1,7 +1,7 @@
 use Mix.Config
 
 # We run a server during test for Wallaby integration testing.
-config :app_prototype, AppPrototype.Endpoint,
+config :app_prototype, AppPrototypeWeb.Endpoint,
   http: [port: 4001],
   server: true,
   secret_key_base: "0123456789012345678901234567890123456789012345678901234567890123456789"
