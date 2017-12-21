@@ -10,7 +10,7 @@ defmodule AppPrototype.AcceptanceCase do
       import Ecto.Changeset
       import Ecto.Query
 
-      import AppPrototype.Router.Helpers
+      import AppPrototypeWeb.Router.Helpers
     end
   end
 

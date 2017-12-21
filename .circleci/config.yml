@@ -37,5 +37,5 @@ jobs:
       - run: mix local.hex --force
       - run: mix deps.get
       - run: yarn
-      - run: brunch build
+      - run: cd assets && brunch build && cd -
       - run: mix test
