@@ -43,7 +43,7 @@ Now you can finish your setup & verify things are working:
 * `mix deps.get`
 * `mix ecto.setup`
 * `cd assets && yarn install`
-* `cd assets && brunch build`
+* `cd assets && ./node_modules/.bin/brunch build`
 * `mix test`
 
 ## Running the server
